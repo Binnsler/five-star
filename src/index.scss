@@ -1,1 +1,10 @@
+// General
 body {padding: 20px;}
+#profile-posts {width:100%; display: inline-block;}
+#profile-details {width:100%; display: inline-block;}
+
+/* Widescreen */
+@media (min-width: 796px) {
+  #profile-posts {width:24.8%; display: inline-block; }
+  #profile-details {width:74.8%; display: inline-block;}
+}

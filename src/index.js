@@ -6,7 +6,14 @@ var Backbone = require('backbone');
 // SASS
 require('./index.scss');
 
-// App
+// Model and Top Level View
+var ProfileModel = require('./models/model.js');
+var ProfileView = require('./views/profile.js');
+
+// Instantiation
 $(document).ready(function () {
-  console.log('hello world')
+  var profileModel = new ProfileModel();
+  var profileView = new ProfileView({model: profileModel});
+
+  profileModel.fetch();
 });
