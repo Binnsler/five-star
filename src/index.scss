@@ -1,14 +1,43 @@
 // General
 body {padding: 20px;}
+#profile {width:100%;}
+ul {padding:0; margin:0;}
+$green: #26af6f;
 
 // Right Column
 #profile-posts {
   width:100%;
-  display: inline-block;
+  display: block;
 
-  .recent-posts {display:inline-block;}
-  .add-post {display:inline-block; border:2px solid red;}
+  .recent-posts {display:inline-block; padding-left:10px; color: $green; margin-top:20px;}
+  .add-post {
+    float:right;
+    border:2px solid $green;
+    background-color:white;
+    color: $green;
+    cursor: pointer;
+    font-size:15px;
+    margin-top:20px;
 
+  }
+  .add-post:hover {
+    color:white;
+    background-color: $green;
+    border: 2px solid $green;
+  }
+  .post {
+    cursor: pointer;
+    list-style:none;
+    border-: 100px;
+    padding: 10px; ;
+
+    .post-title {font-weight:bold;}
+    .post-time {font-weight:italic}
+    .break-div {width: 100px; background-color:#ccc; height:1px; margin:0 auto;}
+  }
+  .post:hover {
+    background-color: #f7f7f7
+  }
 
 }
 
@@ -16,23 +45,34 @@ body {padding: 20px;}
 #profile-details {
   width:100%;
   display: inline-block;
+  vertical-align:top;
+  border-bottom:1px solid #ccc;
 
   // Picture and Name
-  .picture-div {display:inline-block; padding:20px;}
-  .picture {width:200px; height:auto; padding:20px;}
-  .name {color:blue; text-align:center;}
+  .picture-div {display:block; text-align:center;}
+  .picture {width:300px; height:auto; border-bottom:5px solid white; }
+  .picture:hover {cursor:pointer; border-bottom:5px solid $green;}
+  .name {text-align:center;}
 
   // Details
-  .details-div {display:inline-block; vertical-align: top; padding:20px;}
-  .nickname {color:blue;}
-  .email {color:blue;}
-  .bio {color:blue;}
+  .details-div {display:block; vertical-align: top;}
+  .nickname {color:$green; font-size:30px;}
+  .email {}
+  .bio {}
 }
 
 
 
 /* Widescreen */
-@media (min-width: 796px) {
-  #profile-posts {width:33.2%; display: inline-block; }
-  #profile-details {width:66.5%; display: inline-block;}
+@media (min-width: 850px) {
+  #profile-posts {width:33%; display: inline-block; }
+  #profile-details {
+    width:66%;
+    display: inline-block;
+    border-bottom:none;
+    .picture-div {display:inline-block;}
+    .details-div {display:inline-block; margin-left:20px;}
+
+  }
+
 }
