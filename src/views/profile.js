@@ -19,6 +19,14 @@ var ProfileView = Backbone.View.extend({
     this.profileDetails = new ProfileDetails({model: this.model});
     this.profilePosts = new ProfilePosts({model: this.model});
     return this;
+  },
+
+  events: {
+    'click .add-post': 'addPost'
+  },
+
+  addPost: function(){
+    alert('Add a new post')
   }
 });
 
