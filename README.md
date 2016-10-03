@@ -25,3 +25,5 @@ npm run dev
 ```
 
 Navigate to localhost:8080 to view the app.
+
+Webpack bundles with /src/index.js as the starting point, which is a great place to begin reading the code.
