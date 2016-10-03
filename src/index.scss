@@ -1,10 +1,38 @@
 // General
 body {padding: 20px;}
-#profile-posts {width:100%; display: inline-block;}
-#profile-details {width:100%; display: inline-block;}
+
+// Right Column
+#profile-posts {
+  width:100%;
+  display: inline-block;
+
+  .recent-posts {display:inline-block;}
+  .add-post {display:inline-block;}
+
+}
+
+// Left Column
+#profile-details {
+  width:100%;
+  display:
+  inline-block;
+
+  // Picture and Name
+  .picture-div {display:inline-block; padding:20px;}
+  .picture {width:200px; height:auto; padding:20px;}
+  .name {color:blue; text-align:center;}
+
+  // Details
+  .details-div {display:inline-block; vertical-align: top; padding:20px;}
+  .nickname {color:blue;}
+  .email {color:blue;}
+  .bio {color:blue;}
+}
+
+
 
 /* Widescreen */
 @media (min-width: 796px) {
-  #profile-posts {width:24.8%; display: inline-block; }
-  #profile-details {width:74.8%; display: inline-block;}
+  #profile-posts {width:33.2%; display: inline-block; }
+  #profile-details {width:66.5%; display: inline-block;}
 }

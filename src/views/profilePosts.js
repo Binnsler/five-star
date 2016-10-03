@@ -11,7 +11,10 @@ var ProfilePosts = Backbone.View.extend({
   },
 
   render: function(){
-    this.$el.html(this.template);
+    var posts = this.model.get('recentPosts');
+    posts.forEach(function(post){
+      this.$el.append(this.template(post));
+    }, this);
   }
 });
 
